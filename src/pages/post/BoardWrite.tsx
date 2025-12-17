@@ -37,6 +37,7 @@ function BoardWrite({ currentUser }: Props) {
                 title: data.title,
                 content: data.content,
                 userId: currentUser.uid,
+                username: currentUser.email,
                 // new Date() : 지금 현재 시간을 출력하는 Javascript 내장 메소드
                 // Timestamp.now() : 현재 시간을 출력하는 Firestore 제공 메소드
                 createdAt: Timestamp.now(),
