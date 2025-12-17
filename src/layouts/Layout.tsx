@@ -1,10 +1,15 @@
 import { Outlet } from "react-router";
 import Header from "../components/common/Header.tsx";
+import type { User } from "firebase/auth";
 
-function Layout() {
+type Props = {
+    currentUser: User | null;
+}
+
+function Layout({currentUser}:Props) {
     return (
         <>
-            <Header />
+            <Header currentUser={currentUser} />
             <main>
                 <Outlet />
             </main>
