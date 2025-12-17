@@ -1,9 +1,14 @@
 import { Outlet } from "react-router";
+import Header from "../components/common/Header.tsx";
 
 function Layout() {
     return (
         <>
-            <Outlet />
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+
         </>
     );
 }
