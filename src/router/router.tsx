@@ -15,9 +15,9 @@ const router = (currentUser: User | null) =>
             element: <Layout currentUser={currentUser} />,
             children: [
                 { path: "/", element: <BoardList /> },
-                { path: "/post/:id", element: <BoardDetail /> },
+                { path: "/post/:id", element: <BoardDetail currentUser={currentUser}/> },
                 { path: "/post/write", element: <BoardWrite currentUser={currentUser} /> },
-                { path: "/post/edit", element: <BoardEdit /> },
+                { path: "/post/edit/:id", element: <BoardEdit /> },
                 { path: "/login", element: <Login /> },
                 { path: "/register", element: <Register /> },
             ],

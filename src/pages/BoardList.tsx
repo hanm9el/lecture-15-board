@@ -4,23 +4,15 @@ import {
     getDocs,
     orderBy,
     query,
-    type Timestamp,
 } from "firebase/firestore";
 import { Container, Title } from "../styles/auth.tsx";
 import { Link } from "react-router";
 import { ActionButton } from "../styles/styles.tsx";
 import styled from "styled-components";
 import { db } from "../firebase.ts";
+import type {PostType} from "../types/post.ts";
 
-type PostType = {
-    id: string;
-    title: string;
-    content: string;
-    userId: string;
-    username?: string;
-    createdAt: Timestamp;
-    views: number;
-};
+
 
 const Table = styled.table`
     width: 100%;
