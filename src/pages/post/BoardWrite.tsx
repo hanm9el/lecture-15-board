@@ -11,7 +11,7 @@ type Props = {
     currentUser: User | null;
 };
 
-type PostFormData = {
+export type PostFormData = {
     title: string;
     content: string;
 };

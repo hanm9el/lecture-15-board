@@ -13,7 +13,6 @@ import {
     updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase.ts";
-import firebase from "firebase/compat/app";
 
 type Props = {
     currentUser: User | null;
@@ -157,6 +156,3 @@ function BoardDetail({ currentUser }: Props) {
     );
 }
 export default BoardDetail;
-function fetchPost() {
-    throw new Error("Function not implemented.");
-}
