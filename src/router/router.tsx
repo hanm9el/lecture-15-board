@@ -8,6 +8,7 @@ import Login from "../pages/(auth)/Login.tsx";
 import Register from "../pages/(auth)/Register.tsx";
 import Layout from "../layouts/Layout.tsx";
 import type { User } from "firebase/auth";
+import Profile from "../pages/Profile.tsx";
 
 const router = (currentUser: User | null) =>
     createBrowserRouter([
@@ -18,6 +19,7 @@ const router = (currentUser: User | null) =>
                 { path: "/post/:id", element: <BoardDetail currentUser={currentUser}/> },
                 { path: "/post/write", element: <BoardWrite currentUser={currentUser} /> },
                 { path: "/post/edit/:id", element: <BoardEdit currentUser={currentUser} /> },
+                { path: "/profile", element: <Profile currentUser={currentUser} /> },
                 { path: "/login", element: <Login /> },
                 { path: "/register", element: <Register /> },
             ],

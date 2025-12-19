@@ -58,15 +58,22 @@ function Header({ currentUser }: Props) {
                     >
                         <span
                             style={{
-                                color: "#555",
+                                color: "#333",
+                                fontWeight : "bold",
+                                textDecoration: "underline",
+                                cursor: "pointer"
                             }}
                         >
                             {/*string 타입에서 사용할 수 있는 메소드 : split())
                             split : 문자열에서 어떠한 글자를 기준으로 분리할 수 있는 메소드
                                     결과는 array 형태로 저장됨
                             예시 : "abd@nav.com"을 "@"로 split하면, ["abd, "abd.com"] 으로반환*/}
-                            환영합니다.{currentUser.email?.split("@")[0]}님~!
+                            환영합니다. 멋진&rarr;{currentUser.email?.split("@")[0]}님
                         </span>
+                        <Link to={"/profile"}>
+                            {/* outlined={true}를 넣으면 흰색 배경의 깔끔한 버튼이 됩니다 */}
+                            <ActionButton outlined={true}>마이페이지</ActionButton>
+                        </Link>
                         <ActionButton onClick={onLogout}>로그아웃</ActionButton>
                     </div>
                 ) : (
